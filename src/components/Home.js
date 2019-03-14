@@ -16,10 +16,10 @@ export default class Home extends Component {
   };
 
   handleFormSubmit = async () => {
-    const moviesResponse = await requestUtil.fetchMovieDataExample(
+    const moviesResponse = await requestUtil.fetchShowDataExample(
       this.state.input1
     );
-    console.log(moviesResponse.data);
+    console.log(moviesResponse);
   };
 
   render() {
