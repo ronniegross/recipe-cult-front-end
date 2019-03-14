@@ -15,11 +15,12 @@ export default class Home extends Component {
     this.setState({ input2: event.target.value });
   };
 
-  handleFormSubmit = async () => {
-    const moviesResponse = await requestUtil.fetchShowDataExample(
-      this.state.input1
+  handleFormSubmit = async () => {  
+    const response = await requestUtil.sendData(
+      this.state.input1,
+      this.state.input2
     );
-    console.log(moviesResponse);
+    console.log(response);
   };
 
   render() {
