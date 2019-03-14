@@ -1,31 +1,38 @@
 import React, { Component } from "react";
-import { Row, Input, Button } from "react-materialize";
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField"
+import "../App.css"
 
 export default class InputForm extends Component {
   render() {
     return (
       <div>
-        <Row>
-          <Input
-            type="email"
-            label="Form Input 1"
-            s={8}
-            onChange={this.props.handleInput1Change}
-          />
-        </Row>
-        <Row>
-          <Input
-            type="password"
-            label="Form Input 2 - hidden"
-            s={8}
-            onChange={this.props.handleInput2Change}
-          />
-        </Row>
-        <Row>
-          <Button waves="light" onClick={this.props.handleFormSubmit}>
-            Submit Input
-          </Button>
-        </Row>
+        <div className="formInput">
+        <TextField
+          id="standard-name"
+          label="Form Input 1"
+          value={this.props.input1}
+          onChange={this.props.handleInput1Change}
+          margin="normal"
+        />
+        </div>
+        <div className="formInput button">
+        <Button 
+          variant="contained" 
+          color="primary"
+          onClick={this.props.handleFormSubmit}>
+          Submit Search
+        </Button> 
+        </div>
+        <div className="formInput">
+        <TextField
+          id="standard-name"
+          label="Form Input 2"
+          value={this.props.input2}
+          onChange={this.props.handleInput2Change}
+          margin="normal"
+        />
+        </div> 
       </div>
     );
   }

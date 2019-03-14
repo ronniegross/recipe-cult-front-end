@@ -1,7 +1,7 @@
 import InputDisplay from "./InputDisplay";
 import InputForm from "./InputForm";
 import React, { Component } from "react";
-import { Navbar } from "react-materialize";
+import Navbar from "./Navbar";
 import * as requestUtil from "../Util/util";
 import "../App.css";
 
@@ -25,12 +25,15 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <Navbar brand="React" right />
-        <InputDisplay input1={this.state.input1} input2={this.state.input2} />
+        <Navbar />
         <InputForm
           handleInput1Change={this.handleInput1Change}
           handleInput2Change={this.handleInput2Change}
           handleFormSubmit={this.handleFormSubmit}
+        />
+        <InputDisplay 
+          input1={this.state.input1} 
+          input2={this.state.input2} 
         />
       </div>
     );
