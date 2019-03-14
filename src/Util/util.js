@@ -1,7 +1,8 @@
 import axios from "axios";
 
-export const sendData = async formInput => {
-  console.log("sending data");
+export const sendData = async (input1, input2) => {
+  console.log(`First Input: ${input1}`);
+  console.log(`First Input: ${input2}`);
 };
 
 export const fetchShowDataExample = async formInput => {
