@@ -26,12 +26,12 @@ export default class Home extends Component {
     return (
       <div>
         <Navbar brand="React" right />
+        <InputDisplay input1={this.state.input1} input2={this.state.input2} />
         <InputForm
           handleInput1Change={this.handleInput1Change}
           handleInput2Change={this.handleInput2Change}
           handleFormSubmit={this.handleFormSubmit}
         />
-        <InputDisplay input1={this.state.input1} input2={this.state.input2} />
       </div>
     );
   }
