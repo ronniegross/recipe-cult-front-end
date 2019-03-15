@@ -4,12 +4,12 @@ import InputForm from "../InputForm";
 import * as requestUtil from "../../Util/util";
 
 class FormPage extends Component {
-    state = {  };
+    state = {};
 
     handleInput1Change = event => {
         this.setState({ input1: event.target.value });
     };
-    
+
     handleInput2Change = event => {
         this.setState({ input2: event.target.value });
     };
@@ -18,7 +18,7 @@ class FormPage extends Component {
         this.setState({ input3: event.target.value });
     };
 
-    handleFormSubmit = async () => {  
+    handleFormSubmit = async () => {
         const response = await requestUtil.sendData(
             this.state.input1,
             this.state.input2,
@@ -27,23 +27,23 @@ class FormPage extends Component {
         console.log(response);
     };
 
-    render() { 
-        return ( 
+    render() {
+        return (
             <div>
-            <InputForm
-              handleInput1Change={this.handleInput1Change}
-              handleInput2Change={this.handleInput2Change}
-              handleInput3Change={this.handleInput3Change}
-              handleFormSubmit={this.handleFormSubmit}
-            />
-            <InputDisplay 
-              input1={this.state.input1} 
-              input2={this.state.input2}
-              input3={this.state.input3} 
-            />
-          </div>
-         );
+                <InputForm
+                    handleInput1Change={this.handleInput1Change}
+                    handleInput2Change={this.handleInput2Change}
+                    handleInput3Change={this.handleInput3Change}
+                    handleFormSubmit={this.handleFormSubmit}
+                />
+                <InputDisplay
+                    input1={this.state.input1}
+                    input2={this.state.input2}
+                    input3={this.state.input3}
+                />
+            </div>
+        );
     }
 }
- 
+
 export default FormPage;

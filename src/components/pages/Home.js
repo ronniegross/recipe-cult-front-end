@@ -12,7 +12,7 @@ export default class Home extends Component {
       <div>
         <Router>
           <div>
-          <Navbar />
+            <Navbar />
             <Route path="/form" component={FormPage} />
             <Route path="/table" component={TablePage} />
           </div>
