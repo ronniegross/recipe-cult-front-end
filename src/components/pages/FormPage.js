@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import InputDisplay from "../InputDisplay";
 import InputForm from "../InputForm";
 import * as requestUtil from "../../Util/util";
+import styled from "styled-components";
+
+const FormContainer = styled.div`
+    width: 20%;
+    margin: 0 auto;
+`
 
 class FormPage extends Component {
     state = {};
@@ -29,7 +35,7 @@ class FormPage extends Component {
 
     render() {
         return (
-            <div>
+            <FormContainer>
                 <InputForm
                     handleInput1Change={this.handleInput1Change}
                     handleInput2Change={this.handleInput2Change}
@@ -41,7 +47,7 @@ class FormPage extends Component {
                     input2={this.state.input2}
                     input3={this.state.input3}
                 />
-            </div>
+            </FormContainer>
         );
     }
 }
