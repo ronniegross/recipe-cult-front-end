@@ -8,41 +8,34 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import styled from 'styled-components'
 
-const styles = theme => ({
-    root: {
-        width: '100%',
-        marginTop: theme.spacing.unit * 3,
-        overflowX: 'auto',
-    },
-    table: {
-        minWidth: 700,
-    },
-});
-
+const TableContainer = styled.div`
+    width: 80vw;
+    margin: 0 auto;
+    .root {
+        width: '100%';
+        margin-top: 10px;
+        overflow-x: 'auto';
+    }
+    .table {
+        min-width: 700px;
+    }
+`
 let id = 0;
 const createData = (name, email, phoneNumber, projectStatus) => {
     id += 1;
     return { id, name, email, phoneNumber, projectStatus };
 }
-
 const rows = [
     createData('Facebook', "markzuck@gmail.com", "123-234-3456", "Planning"),
     createData('Google', "google@gmail.com", "845-153-2649", "Complete"),
     createData('Amazon', "JeffBezos@gmail.com", "276-231-4587", "Planning")
 ];
 
-const TableContainer = styled.div`
-    width: 80vw;
-    margin: 0 auto;
-`
-
-function TablePage(props) {
-    const { classes } = props;
-
+export default function TablePage(props) {
     return (
         <TableContainer>
-            <Paper className={classes.root}>
-                <Table className={classes.table}>
+            <Paper className={"root"}>
+                <Table className={"table"}>
                     <TableHead>
                         <TableRow>
                             <TableCell>Client Name</TableCell>
@@ -67,6 +60,4 @@ function TablePage(props) {
             </Paper>
         </TableContainer>
     );
-}
-
-export default withStyles(styles)(TablePage);
+};
