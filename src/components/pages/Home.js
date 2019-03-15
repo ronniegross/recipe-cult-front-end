@@ -7,12 +7,17 @@ import TablePage from "./TablePage";
 export default class Home extends Component {
   state = {};
 
+  homePage = () => {
+    return <h1>Hello from Homepage!</h1>
+  }
+
   render() {
     return (
       <div>
         <Router>
           <div>
             <Navbar />
+            <Route exact path="/" component={this.homePage} />
             <Route path="/form" component={FormPage} />
             <Route path="/table" component={TablePage} />
           </div>
