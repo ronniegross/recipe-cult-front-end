@@ -5,7 +5,6 @@ import TextField from "@material-ui/core/TextField"
 export default function InputForm(props) {
     return (
       <div>
-        <div className="formInput">
         <TextField
           id="standard-name"
           label="Form Input 1"
@@ -13,33 +12,26 @@ export default function InputForm(props) {
           onChange={props.handleInput1Change}
           margin="normal"
         />
-        </div>
-        <div className="formInput">
         <TextField
           id="standard-name"
           label="Form Input 2"
           value={props.input2}
           onChange={props.handleInput2Change}
           margin="normal"
-        />
-        </div> 
-        <div className="formInput">
+        /> 
         <TextField
           id="standard-name"
           label="Form Input 3"
           value={props.input3}
           onChange={props.handleInput3Change}
           margin="normal"
-        />
-        </div> 
-        <div className="formInput button">
+        /> 
         <Button 
           variant="contained" 
           color="primary"
           onClick={props.handleFormSubmit}>
           Submit Form
         </Button> 
-        </div>
       </div>
     );
 }
