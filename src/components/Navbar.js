@@ -8,18 +8,21 @@ import styled from 'styled-components';
 export default function Navbar() {
     const NavBarContainer = styled.div`
         margin-bottom: 50px;
+        .link {
+            text-decoration: none;
+        }
     `
     return (
         <NavBarContainer>
             <AppBar className="navbar" position="static" color="primary">
                 <Toolbar>
-                    <Link to="/">
+                    <Link className="link" to="/">
                         <Button>Home</Button>
                     </Link>
-                    <Link to="/form">
+                    <Link className="link" to="/form">
                         <Button>Form</Button>
                     </Link>
-                    <Link to="/table">
+                    <Link className="link" to="/table">
                         <Button>Table</Button>
                     </Link>
                 </Toolbar>
