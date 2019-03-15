@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField"
-import "../App.css"
 
 export default class InputForm extends Component {
   render() {
