@@ -4,26 +4,20 @@ import Navbar from "../Navbar";
 import FormPage from "./FormPage";
 import TablePage from "./TablePage";
 
-export default class Home extends Component {
-  state = {};
-
-  homePage = () => {
+export default function Home() {
+  const homePage = () => {
     return <h1>Hello from Homepage!</h1>
   }
-
-  render() {
-    return (
-      <div>
-        <Router>
-          <div>
-            <Navbar />
-            <Route exact path="/" component={this.homePage} />
-            <Route path="/form" component={FormPage} />
-            <Route path="/table" component={TablePage} />
-          </div>
-        </Router>
-      </div>
-
-    );
-  }
+  return (
+    <div>
+      <Router>
+        <div>
+          <Navbar />
+          <Route exact path="/" component={homePage} />
+          <Route path="/form" component={FormPage} />
+          <Route path="/table" component={TablePage} />
+        </div>
+      </Router>
+    </div>
+  );
 }
