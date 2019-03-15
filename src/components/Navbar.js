@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+import styled from 'styled-components';
 
 export default function Navbar() {
+    const NavBarContainer = styled.div`
+        margin-bottom: 50px;
+    `
     return (
-        <div>
+        <NavBarContainer>
             <AppBar className="navbar" position="static" color="primary">
                 <Toolbar>
                     <Link to="/">
@@ -20,6 +24,6 @@ export default function Navbar() {
                     </Link>
                 </Toolbar>
             </AppBar>
-        </div>
+        </NavBarContainer>
     );
 };
