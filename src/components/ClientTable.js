@@ -7,19 +7,20 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import styled from 'styled-components';
 
-const TableContainer = styled.div`
-    width: 80vw;
-    margin: 0 auto;
-    .root {
-        width: '100%';
-        margin-top: 10px;
-        overflow-x: 'auto';
-    }
-    .table {
-        min-width: 700px;
-    }
-`
 export default function ClientTable(props) {
+    
+    const TableContainer = styled.div`
+        width: 80vw;
+        margin: 0 auto;
+        .root {
+            width: '100%';
+            margin-top: 10px;
+            overflow-x: 'auto';
+        }
+        .table {
+            min-width: 700px;
+        }
+    `
 
     let clientRows = props.clients.map((client, index) => {
         return (
