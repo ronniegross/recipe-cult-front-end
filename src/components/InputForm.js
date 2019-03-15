@@ -30,7 +30,7 @@ export default function InputForm(props) {
           variant="contained" 
           color="primary"
           onClick={props.handleFormSubmit}>
-          Submit Form
+            Submit Form
         </Button> 
       </div>
     );
