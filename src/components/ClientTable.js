@@ -20,16 +20,18 @@ const TableContainer = styled.div`
     }
 `
 export default function ClientTable(props) {
-    
+
     let clientRows = props.clients.map((client, index) => {
-        return <TableRow key={index}>
-            <TableCell component="th" scope="row">
-                {client.name}
-            </TableCell>
-            <TableCell align="right">{client.email}</TableCell>
-            <TableCell align="right">{client.phoneNumber}</TableCell>
-            <TableCell align="right">{client.projectStatus}</TableCell>
-        </TableRow>
+        return (
+            <TableRow key={index}>
+                <TableCell component="th" scope="row">
+                    {client.name}
+                </TableCell>
+                <TableCell align="right">{client.email}</TableCell>
+                <TableCell align="right">{client.phoneNumber}</TableCell>
+                <TableCell align="right">{client.projectStatus}</TableCell>
+            </TableRow>
+        )
     });
 
     return (
