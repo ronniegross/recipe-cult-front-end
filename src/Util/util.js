@@ -12,11 +12,3 @@ export const getClients = async () => {
   const response = await axios.get(url);
   return response.data;
 }
-
-export const fetchShowDataExample = async formInput => {
-  console.log("fetching movie data for: ", formInput);
-  const response = await axios.get(
-    `http://api.tvmaze.com/search/shows?q=${formInput}`
-  );
-  return response.data;
-};
