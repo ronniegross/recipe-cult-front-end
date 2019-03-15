@@ -12,9 +12,10 @@ class Navbar extends Component {
             <div>
                 <AppBar className="navbar" position="static" color="primary">
                 <Toolbar>
-                    <Link to="/">Home</Link>
-                    <Link to="/form">Form</Link>
-                    <Link to="/table">Table</Link>
+                    <Link to="/">
+                    <Button>Home</Button></Link>
+                    <Link to="/form"><Button>Form</Button></Link>
+                    <Link to="/table"><Button>Table</Button></Link>
                 </Toolbar>
                 </AppBar>
             </div>
