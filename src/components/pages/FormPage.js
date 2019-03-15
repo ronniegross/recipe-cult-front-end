@@ -4,7 +4,7 @@ import InputForm from "../InputForm";
 import * as requestUtil from "../../Util/util";
 
 class FormPage extends Component {
-    state = {  }
+    state = {  };
 
     handleInput1Change = event => {
         this.setState({ input1: event.target.value });

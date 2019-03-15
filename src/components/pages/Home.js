@@ -3,18 +3,22 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Navbar from "../Navbar";
 import FormPage from "./FormPage";
 import TablePage from "./TablePage";
+import styled from "styled-components";
+
+const styledNav = styled.nav`
+
+`
 
 export default class Home extends Component {
   state = {};
 
-
   render() {
     return (
       <div>
-        <Navbar />
         <Router>
           <div>
-            <nav>
+          <Navbar />
+            {/* <nav>
               <ul>
                 <li>
                   <Link to="/">Home</Link>
@@ -26,7 +30,7 @@ export default class Home extends Component {
                 <Link to="/table">Table</Link>
               </li>
               </ul>
-            </nav>
+            </nav> */}
             <Route path="/form" component={FormPage} />
             <Route path="/table" component={TablePage} />
           </div>
