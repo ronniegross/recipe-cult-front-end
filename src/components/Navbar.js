@@ -14,7 +14,7 @@ export default function Navbar() {
     `
     return (
         <NavBarContainer>
-            <AppBar className="navbar" position="static" color="primary">
+            <AppBar position="static" color="primary">
                 <Toolbar>
                     <Link className="link" to="/">
                         <Button>Home</Button>
