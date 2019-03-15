@@ -1,11 +1,12 @@
 import axios from "axios";
 
-export const sendData = async (input1, input2) => {
+export const sendData = async (input1, input2, input3) => {
   console.log(`First Input: ${input1}`);
   console.log(`Second Input: ${input2}`);
   let payload = {
     input1,
-    input2
+    input2,
+    input3
   }
   const response = await axios.post(
     'http://localhost:3001/post-data',

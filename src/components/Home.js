@@ -15,12 +15,17 @@ export default class Home extends Component {
     this.setState({ input2: event.target.value });
   };
 
+  handleInput3Change = event => {
+    this.setState({ input3: event.target.value });
+  };
+
   handleFormSubmit = async () => {  
-    const response = await requestUtil.sendData(
+    const { data } = await requestUtil.sendData(
       this.state.input1,
-      this.state.input2
+      this.state.input2,
+      this.state.input3
     );
-    console.log(response);
+    console.log(data);
   };
 
   render() {
@@ -30,11 +35,13 @@ export default class Home extends Component {
         <InputForm
           handleInput1Change={this.handleInput1Change}
           handleInput2Change={this.handleInput2Change}
+          handleInput3Change={this.handleInput3Change}
           handleFormSubmit={this.handleFormSubmit}
         />
         <InputDisplay 
           input1={this.state.input1} 
-          input2={this.state.input2} 
+          input2={this.state.input2}
+          input3={this.state.input3} 
         />
       </div>
     );

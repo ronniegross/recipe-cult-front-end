@@ -16,14 +16,6 @@ export default class InputForm extends Component {
           margin="normal"
         />
         </div>
-        <div className="formInput button">
-        <Button 
-          variant="contained" 
-          color="primary"
-          onClick={this.props.handleFormSubmit}>
-          Submit Search
-        </Button> 
-        </div>
         <div className="formInput">
         <TextField
           id="standard-name"
@@ -33,6 +25,23 @@ export default class InputForm extends Component {
           margin="normal"
         />
         </div> 
+        <div className="formInput">
+        <TextField
+          id="standard-name"
+          label="Form Input 3"
+          value={this.props.input3}
+          onChange={this.props.handleInput3Change}
+          margin="normal"
+        />
+        </div> 
+        <div className="formInput button">
+        <Button 
+          variant="contained" 
+          color="primary"
+          onClick={this.props.handleFormSubmit}>
+          Submit Search
+        </Button> 
+        </div>
       </div>
     );
   }
