@@ -20,12 +20,12 @@ export default class Home extends Component {
   };
 
   handleFormSubmit = async () => {  
-    const { data } = await requestUtil.sendData(
+    const response = await requestUtil.sendData(
       this.state.input1,
       this.state.input2,
       this.state.input3
     );
-    console.log(data);
+    console.log(response);
   };
 
   render() {

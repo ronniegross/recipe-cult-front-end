@@ -39,7 +39,7 @@ export default class InputForm extends Component {
           variant="contained" 
           color="primary"
           onClick={this.props.handleFormSubmit}>
-          Submit Search
+          Submit Form
         </Button> 
         </div>
       </div>
