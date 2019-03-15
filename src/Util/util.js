@@ -7,6 +7,12 @@ export const sendData = async (input1, input2, input3) => {
   return response.data;
 };
 
+export const getClients = async () => {
+  let url = 'http://localhost:3001/get-clients';
+  const response = await axios.get(url);
+  return response.data;
+}
+
 export const fetchShowDataExample = async formInput => {
   console.log("fetching movie data for: ", formInput);
   const response = await axios.get(
