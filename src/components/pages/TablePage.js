@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ClientTable from '../ClientTable';
-import * as requestUtil from '../../Util/util';
+import * as requestUtil from '../../Util/requestUtil';
 
 class TablePage extends Component {
     state = {
@@ -21,5 +21,5 @@ class TablePage extends Component {
         );
     }
 }
-
+    
 export default TablePage;

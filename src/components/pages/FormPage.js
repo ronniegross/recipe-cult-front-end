@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import InputDisplay from "../InputDisplay";
 import InputForm from "../InputForm";
-import * as requestUtil from "../../Util/util";
+import * as requestUtil from "../../Util/requestUtil";
 import styled from "styled-components";
 
 const FormContainer = styled.div`
