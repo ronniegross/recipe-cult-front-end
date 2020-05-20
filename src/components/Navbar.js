@@ -25,6 +25,9 @@ export default function Navbar() {
                     <Link className="link" to="/table">
                         <Button>Table</Button>
                     </Link>
+                    <Link className="link" to="/sign-up">
+                        <Button>Sign Up</Button>
+                    </Link>
                 </Toolbar>
             </AppBar>
         </NavBarContainer>

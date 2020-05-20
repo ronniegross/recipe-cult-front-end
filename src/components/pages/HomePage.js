@@ -8,7 +8,8 @@ export default function HomePage() {
   `
   return (
     <HomeContainer>
-      <h1>Hello from Homepage!</h1>
+      <h1>RecipeCult.com</h1>
+      
     </HomeContainer>
   );
 }

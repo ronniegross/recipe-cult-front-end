@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.9.2",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-materialize": "^2.6.0",
