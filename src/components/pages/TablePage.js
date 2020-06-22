@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ClientTable from '../ClientTable';
-import * as requestUtil from '../../Util/requestUtil';
+import * as requestUtil from '../../util/requestUtil';
 
 class TablePage extends Component {
     state = {
